@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDevBlog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Gastsprekers verslag van Ufuk Argün</h1>
+        <section class="weeklynerd">
+            <article>
+                <h2>Week 1</h2>
+                <h3>Kilian Valkhof - Polypane</h3>
+                <p>Kilian is de eigenaar van de browser Polypane, <a href="https://polypane.app/">Polypane</a> is een
+                    browser gericht op webdevelopers, zo
+                    biedt het extra functionaliteiten en is het vaak voor op de aankomende features, die een Google
+                    Chrome een aantal jaren kan nemen voor het implementeren.
+                    Kilian heeft samen met zijn team de browser gemaakt in een JavaScript framework genaamd <a
+                        href="https://www.electronjs.org/governance">Electron Governance</a>
+                </p>
+
+                <p>Kilian kwam ons vertellen dat er steeds meer functionaliteiten in je browsers komen en dat wij als
+                    developers hier goed up-to-date voor moeten zijn. Polypane is voor op sommige gebieden als het gaat
+                    om experimental features, eentje hiervan is dat hij bijvoorbeeld 3 verschillende grootte schermen
+                    met elkaar kan syncen.</p>
+
+                <p>De belangrijke les die wij mee kregen was: "Choose the least powerful language suitable for a given
+                    purpose", wat er hier mee wordt bedoelt is: Je kan ontzettend veel krachtige dingen met JavaScript,
+                    maar HTML is in dit geval the least powerful "language", daarom beginnen wij dus met HTML. Denk er
+                    maar eens over na, het is in dit geval de slapste taal waardoor het minst fout kan gaan en we errors
+                    kunnen voorkomen in the toekomst. Nadat we een stapje meer kracht nodig hebben, zoals styling etc,
+                    voegen we dan pas CSS toe, en als we niet verder meer kunnen met CSS, dan pas gebruiken we
+                    JavaScript.
+                </p>
+
+                <p>Once you learn something, you don't learn it again. Hiermee wilt Kilian uitdrukken dat er een grote
+                    groep "oude" developers zijn die niet opnieuw de betere semantische manier gaan leren, omdat ze het
+                    terug in hun tijd dus al hebben geleerd. Hij noemde een goede voorbeeld op, hij zei namelijk: Bijna
+                    alle oude sites die doen het hedendaags nogsteeds, maar dat betekent niet dat de design modern is,
+                    of dat functies verouderd zijn.</p>
+
+                <p>Checkboxes waren vroeger altijd een hell, dat komt omdat het stylen van deze checkboxes ontzettend
+                    moeilijk was en zwaar gelimiteerd was, je kon zelfs de checkbox zelf niet met width groter maken,
+                    maar met scale. Er komen nu Custom toggles in je browser, een goed voorbeeld is bijvoorbeeld de
+                    apple slider, al hoewel het dezelfde logica heeft als een checkbox, namelijk aan of uit, ziet het
+                    ontwerp er toch een stuk anders uit, voorheen gebruikte men vooral libraries zodat ze niet met de
+                    limitaties van de checkbox hoeften te dealen, ze manipuleerden de pseudo elementen zodat het leek
+                    alsof de checkbox veel groter is dan dat het werkelijk is. Op de main element zetten ze dan
+                    <b>appearance: none;</b>.
+                </p>
+
+                <p>Kilian begon het te hebben over focus state en dat het ontzettend belangrijk is dat we de gebruiker
+                    nogsteeds tonen waar hij is als hij bijvoorbeeld tab klikt of iets selecteert, hij legt hierbij ook
+                    uit dat er browsers zijn met custom focus states, deze gebruikers hebben een eigen kleur palette
+                    ingesteld. Nu is het ontzettend belangrijk om op kleine details te letten, als je bijvoorbeeld op
+                    een element <b>outline: none;</b> toevoegt, dan ziet de browser dit als geen outline hebben, ook
+                    niet voor de focus state dus. Iemand die dan een custom kleuren palette heeft ziet de outlining ook
+                    niet. We kunnen hier in een groot verschil maken door simpelweg <b>outline: transparent;</b> toe te
+                    voegen. De outline bestaat dan wel, maar is gewoon transparant wat iemand met een eigen kleuren
+                    palette dus wel kan aanpassen.</p>
+
+                <p>Ken je dat wanneer je op een veld klikt waar je in kan typen er soms oude suggesties te voorschijn
+                    komen? Vroeger hadden we voor deze suggesties extra libraries nodig, nu hoeft dat niet meer. Hier
+                    zouden wij als webdevelopers rekening mee moeten houden en het juiste voorbeeld tonen zodat we met
+                    z'n allen uiteindelijk minder libraries op het internet onnodig inladen.</p>
+
+                <p>Met <b>input type="color"</b> gebruik je je browsers color picker, voorheen ging dat vaak via
+                    libraries en heel wat onnodige imports. Gek als je beseft dat je browser al een ingebouwde color
+                    picker heeft die veel krachtiger en beter is dan de color pickers die hedendaagse libraries bieden.
+                    Er is nogsteeds een limitatie voor de toekomst, Kilian zei namelijk dat hij een MacBook met een luxe
+                    Retina scherm had, deze heeft een betere color range dan sRGB. De color picker (jammer genoeg) is
+                    gelimiteerd om elke kleur in sRGB te pakken. Kilian zei ook dat we gebruik moeten maken van de
+                    system theme settings, dus een dark en light color scheme in de CSS.</p>
+
+                <p>Heb je vroeger ooit een Jump to section gebruikt? De kans is groot dat het er snappy uit zag, of dat
+                    je vrij direct teleporteerde naar de gewenste locatie, maar dit gaf veel verwarring, de gebruiker
+                    weet namelijk ineens niet hoe ver hij op de pagina is gescrolled en waar hij zich bevindt. Om de
+                    jump smoother te maken werd er vroeger <b>JQuery</b> voor gebruikt wat een ontzettend grote library
+                    mee gaf waarvan amper gebruik van werd gemaakt. Tegenwoordig hebben je browser een nieuwe style
+                    attribute namelijk: <b>scroll-behavior: smooth</b>
+                    Hierdoor heeft de jump een smooth scroll effect, ook is er rekening gehouden met marge voor deze
+                    jumps, namelijk met scroll-margin en scroll-padding, kan je de spacing manipuleren zodat je de
+                    sectie op de gewenste plek kan stylen.</p>
+
+                <p>Kilian liet ook het verschil zien tussen position fixed en position sticky, dat sticky van een
+                    bepaalde plek tot plek, een fixed positie kunnen hebben. Carousels zijn ook altijd een grote issue
+                    geweest met ons developers, vooral als het gaat om toegankelijkheid, infinite loop, tabbaar, screen
+                    reader etc. Kilian vertelde ons dat je <b>scroll-snap, scroll-snap-type en scroll-snap-align</b>
+                    styling properties zijn waardoor je de sliding effect kan stylen.</p>
+
+                <p>De details en summary werden uitgelegd, en dat je inline attributes hebt als bijvoorbeeld closed, om
+                    het dicht te maken, ook wees hij ons er op aan dat er een pseudo element namelijk <b>:marker</b>
+                    gebruikt kan worden om het pijltje van de accordions en modals te kunnen stylen.</p>
+
+                <p>Nog een vrij nieuwe element, genaamd Dialog. Voorheen gebruikten wij alert() wat de website animaties
+                    bevroor en er vrijwel geen styling toegevoegd kon worden. Ook was het meer een functie van je
+                    JavaScript. Later kwam dus de <b>Dialog element</b>, Kilian vertelde ons dat er een nieuwe soort
+                    laag over je website heen wordt getoond. Ik stelde de vraag of dit een soort zIndex was, waar Kilian
+                    op antwoordde dat dit niet op dezelfde plane zit, en de dialog element nog echt hier boven op zit.
+                    Met de dialog element spelen de animaties rustig verder en kunnen we eindelijk pop ups veel mooier
+                    stylen, ook kunnen we een form bijvoorbeeld in een dialog doen of een bevestiging knop. Voorheen was
+                    het vrij gelimiteerd.</p>
+
+                <p>We weten allemaal wel wat media queries inmiddels zijn, maar Kilian introduceerde mij aan container
+                    queries, dit zijn dus containers, sections, div's, die op basis van de breedte of hoogte ook apparte
+                    styling binnen het element kunnen toevoegen. Dit kan ontzettend handig zijn voor responsivity en er
+                    zullen zeker nieuwe hoogtes bereikt worden door dit soort nieuwe doorbraken.</p>
+
+                <p>Er zijn nieuwe parent selectors, <b>:has()</b> is hier een van. Wat je met deze selector kan doen is
+                    op basis van een andere element styling geven, dit pusht de limiet van CSS weer een stuk hoger omdat
+                    dingen nu in CSS only zouden kunnen waar normaal JavaScript voor nodig zou zijn. Kilian heeft op de
+                    Polypane website een mooie artikel geschreven waar hij ook de :where en :is functie uitlegt.
+                    <a href="polypane.app/where-is-has">polypane.app/where-is-has</a>
+                </p>
+
+                <p>Field sizing is nu responsive, en je kan er best veek aan customizen nu. Kilian heeft een artikel ook
+                    hierover geschreven:
+                    <a href="https://polypane.app/blog/field-sizing-just-works/">https://polypane.app/blog/field-sizing-just-works/
+                    </a>
+                </p>
+
+                <p>Masonry, de ultieme pinterest tetris effect, nogsteeds heel erg experimenteel, maar we hopen dat in
+                    de toekomst <b>grid-template-rows: masonry</b> er aan komt, Kilian zei ook dat de naam nog kan
+                    veranderen van masonry.
+                    Ook vertelde Kilian dat er een selectlist property in html nu zit, en als child een option element,
+                    waar je gemakkelijk de keuzes er in kan zetten.</p>
+
+                <p>Scroll-driven animation, voordat de gastspreker les begon had ik met mijn docent Sanne het er nog
+                    toevallig over, een nieuwe CSS attribute die de viewport van de gebruiker pakt inplaats van de
+                    gehele scrollzone van de site, hierdoor hoeven we geen intersection observer te gebruiken of lange
+                    lappen JavaScript. We kunnen gemakkelijk <b>animation-timeline: view();</b> gebruiken om de viewport
+                    te gebruiken voor scroll-driven animaties die staggeren. Voorheen heb ik het effect moeten maken met
+                    een library genaamd Framer-Motion, nu zie ik dat ongeveer 1 jaar later het in vanilla CSS ook gaat
+                    lukken. Momenteel is Chrome een van de weinige browsers die deze experimental feature al heeft. Dit
+                    wil ik zeker leren doen via CSS omdat het ontzettend veel tijd en hoofdpijn kan besparen</p>
+            </article>
+            <article>
+                <h2>Week 2</h2>
+                <h3>Fenna de Wilde - Phantom</h3>
+                <p>Deze week hebben we Fenna als gastspreker, Fenna is een oud CMD-er momenteel bij een noorse agency
+                    werkt die internationale kantoren heeft. Fenna had een awwwards award gekregen voor een van haar
+                    eerste sites na de CMD opleiding. Fenna heeft als functietitel Creative Developer</p>
+
+                <p></p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
