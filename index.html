@@ -138,14 +138,73 @@
                     lukken. Momenteel is Chrome een van de weinige browsers die deze experimental feature al heeft. Dit
                     wil ik zeker leren doen via CSS omdat het ontzettend veel tijd en hoofdpijn kan besparen</p>
             </article>
+            
             <article>
                 <h2>Week 2</h2>
                 <h3>Fenna de Wilde - Phantom</h3>
                 <p>Deze week hebben we Fenna als gastspreker, Fenna is een oud CMD-er momenteel bij een noorse agency
                     werkt die internationale kantoren heeft. Fenna had een awwwards award gekregen voor een van haar
-                    eerste sites na de CMD opleiding. Fenna heeft als functietitel Creative Developer</p>
+                    eerste sites na de CMD opleiding. Fenna heeft als haar functietitel Creative Developer</p>
 
-                <p></p>
+                <p>Al vrij direct liet Fenna een website zien die mij bekend voorkwam, namelijk Phantom, Phantom is een
+                    Solana Wallet. Fenna vertelde ons dat het een gaaf project was om aan te werken en dat ze veel van
+                    de brand identity mocht bepalen, zoals het kleine spookje als logo.</p>
+
+                <p>Fenna kwam ons informeren over toegankelijkheid, al vrij snel zei ze dat niemand in het bedrijfsleven
+                    er over blijkt te weten of het boeit ze niet genoeg. Fenna liet ons zien welke frameworks en
+                    libraries ze gebruikt.
+                    Voor de hoofdtaal koos Fenna voor NextJS, hiermee komen er extra functionaliteiten kijken, zoals
+                    server side rendering. Op Vercel kan je dan deze webapp hosten, Vercel ondersteunt ook server side
+                    rendering. Vercel is gemaakt door de team van Meta/Facebook, ook is NextJS gemaakt door hun als een
+                    soort native React language. Voor de CMS en dergelijke, gebruikt Fenna Sanity, hierdoor kan ze
+                    bijvoorbeeld een Headless CMS integreren in de webapp. Uiteindelijk als kers op de taart gebruik
+                    Fenna een library waar ik eerder mee heb gewerkt, namelijk Framer-Motion, dit is een web animatie
+                    library die de functionaliteiten van scroll-driven animaties versimpelde.</p>
+
+                <p>Toen Fenna met trots haar nieuwe project had getweet was de eerste reactie die ze kreeg op twitter,
+                    "Why can't I tab through it". Dit is waar Fenna meer naar het onderwerp toegankelijkheid schuift. Ze
+                    vertelt over de :focus-visible, dit moet eigenlijk altijd aan, of als je nog gekker wilt doen kan je
+                    ook een custom focus toepassen.</p>
+
+                <p>Bij Images heb je een alt tag, deze geef je een beschrijving meer van het plaatje zodat mensen die
+                    beperkt zijn in hun zicht, nogsteeds mee kunnen luisteren met een screenreader. Dit is dan ook waar
+                    Fenna ons uitlegt over ARIA attributes, ARIA staat voor Accessible Rich Internet Applications. Het
+                    is een soort alt tag, maar dan voor elementen waar geen alt tag voor mogelijk is, denk aan een form
+                    of bijvoorbeeld een menu. Fenna gaf hier ook wat voorbeelden, een goed voorbeeld die ze opnoemde was
+                    een stop & play button, bijvoorbeeld op youtube. De gebruiker moet goed geïnformeerd worden over of
+                    de knop de video zou afspelen of pauzeren. Ze noemde een aantal aria-attributes op, zoals
+                    <b>aria-expanded</b> bijvoorbeeld voor als een menu of summary uitgeklapt of ingeklapt is. Met
+                    <b>aria-live</b> kan je de gebruiker zijn screenreader updatende informatie opnieuw laten afspelen,
+                    handig voor bijvoorbeeld een score board, iemand met een screenreader zou een groot deel van de site
+                    opnieuw moeten aanhoren om simpelweg de nieuwe score te weten. Ook is het geannounced als er een
+                    update is, vandaar de naam live. <b>aria-atomic</b> kan je gebruiken om een hele groep of meerdere
+                    elementen te announcen in de screenreader.
+                </p>
+
+
+                <p>Fenna vertelde over hoe ze een fout had gemaakt bij het ontwerp van Phantom. Bij de carousels kon je
+                    moeilijk er doorheen navigeren met een screenreader, met role=region of de section element wordt dit
+                    tegen gegaan, je kan dan ook een aria-role-description gebruiken, bijvoorbeeld "carousel", de
+                    individuele carousel slides krijgen dan een role="group". Fenna vertelde ook over tabindex, en dat
+                    als je tabindex -1 doet, dat het element niet meer tabbaar is.</p>
+
+                <p>Focus guards zijn ontzettend belangrijk, zo houd je de focus van de gebruiker op de juiste plek wat
+                    bedoelt is. Dit gaat eigenlijk hand in hand met de regel one primary action at once. Fenna vertelde
+                    ons dat er 2 NPM packages zijn die we kunnen gebruiken voor focus guards; namelijk react-focus-lock
+                    en react-aria-components.</p>
+
+                <p>Om de accessibility te meten gebruikt Fenna een lighthouse audit of bijvoorbeeld een Figma plugin die
+                    een heatmap kan maken. Met deze audit wordt er gekeken naar de WCAG, de Web Contrast accessibility
+                    Guidelines. Fenna vertelde ook dat de minimum font-size die ze aanraad 16px is, al hoewel op
+                    sommigen gevallen, zoals in de footer, fontsize 14px nog door de beugel kan. De regellengte raadt ze
+                    aan tussen de 50 en 75 tekens. Met de meet unit <b>ch</b> wordt de dikte van de 0 cijfer gepakt en
+                    de regel breedte wordt daardoor net anders gemeten</p>
+
+                <p>Fenna liet een andere website zien waar ze aan bouwde en noemde hier de "Skip to content button", dit
+                    kan ontzettend handig zijn voor screenreaders, omdat het voor een een soort skip advertentie knop
+                    is. Prefers-reduced-motion is dan ook iets waar we rekening mee moeten houden op onze site. Fenna
+                    vertelde ook dat we de gebruiker de controle moeten geven, wat er hiermee wordt bedoelt is dat
+                    autoplay op video en carousels gepauzeerd moet kunnen worden.</p>
         </section>
 
     </main>
